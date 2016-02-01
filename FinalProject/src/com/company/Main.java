@@ -17,7 +17,9 @@ public class Main {
                 break;
             }
             case 2: {
-                //Factorial
+                System.out.println("Enter the number: ");
+                int num = sc.nextInt();
+                System.out.println(Factorial.factorialCalculate(num));
                 break;
             }
         }
