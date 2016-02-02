@@ -13,13 +13,29 @@ public class Main {
             case 1: {
                 System.out.println("Enter the number: ");
                 int num = sc.nextInt();
+                VerifyCorrectUserData(num);
                 System.out.println(Fibonacci.fibonacciCalculate(num));
                 break;
             }
             case 2: {
-                //Factorial
+                System.out.println("Enter the number: ");
+                int num = sc.nextInt();
+                VerifyCorrectUserData(num);
+                System.out.println(Factorial.factorialCalculate(num));
                 break;
             }
         }
+    }
+    public static void VerifyCorrectUserData(int num) {
+        try{
+            if(num <= 0){
+                throw new IllegalArgumentException();
+            }
+
+        } catch (IllegalArgumentException e){
+            System.out.println("[ERROR]: Your number = " + num + "." + "\n" + "Number should be > 0");
+            System.exit(0);
+        }
+
     }
 }
