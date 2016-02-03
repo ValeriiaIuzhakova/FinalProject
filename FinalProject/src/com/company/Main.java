@@ -24,6 +24,16 @@ public class Main {
                 System.out.println(Factorial.factorialCalculate(num));
                 break;
             }
+            default: {
+               try {
+                   throw new IllegalArgumentException();
+               }
+               catch (IllegalArgumentException e){
+                   System.out.println("You entered an invalid number. You can select only 1 or 2");
+                   System.exit(0);
+               }
+            }
+
         }
     }
     public static void VerifyCorrectUserData(int num) {
